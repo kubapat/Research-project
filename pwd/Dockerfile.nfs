@@ -1,0 +1,20 @@
+FROM ubuntu:latest
+
+# Install NFS server
+RUN apt-get update && apt-get install -y nfs-kernel-server
+
+# Expose NFS port
+EXPOSE 2049
+
+# Create a directory to be shared
+RUN mkdir -p /exports
+
+# Update NFS export file to include fsid
+RUN echo "/exports *(rw,sync,no_subtree_check,no_root_squash,fsid=10)" | tee -a /etc/exports
+
+# Start NFS services in the foreground with appropriate flags
+CMD /usr/sbin/rpcbind -w && \
+    /usr/sbin/exportfs -ar && \
+    /usr/sbin/rpc.nfsd -N 2 -V 3 -V 4 --debug && \
+    /usr/sbin/rpc.mountd --foreground
+

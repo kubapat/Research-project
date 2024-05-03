@@ -1,0 +1,89 @@
+version: '3'
+
+services:
+  nfs-server:
+    image: itsthenetwork/nfs-server-alpine:latest
+    container_name: nfs-server
+    restart: unless-stopped
+    privileged: true
+    environment:
+      - SHARED_DIRECTORY=/nfsshare
+    volumes:
+      - ./scratch:/nfsshare
+    ports:
+      - 2049:2049
+    networks:
+      - app_network
+
+  flag_l_option:
+    image: alpine
+    volumes:
+      - ./lflag_path:/rel_path
+    command: sh -c "apk update && apk add --no-cache strace && cd /rel_path && strace -c -S calls pwd && sleep 5 && strace -c -S calls pwd -L"
+
+  invalid_flag:
+    image: alpine
+    volumes:
+      - ./invalid_flag:/rel_path
+    command: sh -c "apk update && apk add --no-cache strace && cd /rel_path && strace -c -S calls pwd && sleep 5 && strace -c -S calls pwd -z"
+
+  relative_paths:
+    image: alpine
+    volumes:
+      - ./rel_path:/rel_path
+    command: sh -c "apk update && apk add --no-cache strace && cd /rel_path && strace -c -S calls pwd && mkdir subdir; cd subdir && strace -c -S calls pwd && cd .. && strace -c -S calls pwd && cd / && strace -c -S calls pwd"
+
+  symbolic_links:
+    image: alpine
+    volumes:
+      - ./sym_link:/sym_link
+    command: sh -c "apk update && apk add --no-cache strace && ln -s /sym_link /test_dir_link; strace -c -S calls pwd && cd /test_dir_link && strace -c -S calls pwd && cd .. && strace -c -S calls pwd && cd / && strace -c -S calls pwd"
+
+  permissions:
+    image: alpine
+    volumes:
+      - ./perms_dir:/perms_dir
+    command: sh -c "apk update && apk add --no-cache strace && chmod 777 /perms_dir && strace -c -S calls pwd && cd /perms_dir && strace -c -S calls pwd && chmod 444 /perms_dir; strace -c -S calls pwd; chmod 000 /perms_dir; strace -c -S calls pwd"
+
+  different_filesystems:
+    image: alpine
+    privileged: true
+    volumes:
+      - ./mount_dir:/mount_dir
+    command: sh -c "apk update && apk add --no-cache strace && strace -c -S calls pwd && touch /tmp/fake_dev.img && truncate -s 5M /tmp/fake_dev.img && LOOP_DEVICE=$$(losetup -f /tmp/fake_dev.img --show) && echo Loop device used $$LOOP_DEVICE && mkdir -p /mount_dir && mount $$LOOP_DEVICE /mount_dir && strace -c -S calls pwd && cd /mount_dir && strace -c -S calls pwd && cd / && strace -c -S calls pwd"
+
+  network_filesystems:
+    image: alpine
+    privileged: true
+    command: >
+      sh -c "sleep 5 &&
+             apk update &&
+             apk add --no-cache nfs-utils strace &&
+             mkdir -p /mnt/nfs &&
+             mount -t nfs -o vers=4 nfs-server:/nfsshare /mnt/nfs &&
+             cd /mnt/nfs && strace -c -S calls pwd"
+    depends_on:
+      - nfs-server
+    networks:
+      - app_network
+
+  large_directory_structure:
+    image: alpine
+    volumes:
+      - ./test_large_dir:/test_large_dir
+    command: sh -c "apk update && apk add --no-cache strace && cd /test_large_dir && strace -c -S calls pwd && mkdir subdir1 subdir2 subdir3 subdir4 subdir5 subdir6 subdir7 subdir8 subdir9 subdir10 && sleep 5 && strace -c -S calls pwd"
+
+volumes:
+  rel_path:
+  sym_link:
+  perms_dir:
+  test_dir:
+  mount_dir:
+  test_large_dir:
+  scratch:
+  invalid_flag:
+  lflag_path:
+
+networks:
+  app_network:
+    driver: bridge

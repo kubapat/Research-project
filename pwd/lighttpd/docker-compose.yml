@@ -1,0 +1,23 @@
+version: '3'
+services:
+  lighttpd:
+    image: jitesoft/lighttpd
+    volumes:
+      - ./app/lighttpd:/var/www/html
+    ports:
+      - "8000:80"
+
+  apache2:
+    image: httpd:2.4
+    volumes:
+      - ./app/apache:/usr/local/apache2/htdocs/public-html
+    ports:
+      - "8001:80"
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./app/nginx:/app
+      - ./nginx.conf:/etc/nginx/conf.d/nginx.conf
+    ports:
+      - "8002:80"

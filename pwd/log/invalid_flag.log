@@ -33,6 +33,149 @@ fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
 OK: 10 MiB in 22 packages
 /rel_path
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 39.62    0.000021          10         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+ 13.21    0.000007           7         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+ 11.32    0.000006           6         1           getuid
+ 11.32    0.000006           6         1         1 ioctl
+ 24.53    0.000013          13         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000053           4        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  7.14    0.000034           5         6           write
+ 12.39    0.000059          14         4           mmap
+  7.14    0.000034           8         4           writev
+  3.57    0.000017           8         2           brk
+  6.09    0.000029          14         2           mprotect
+  5.04    0.000024          12         2           munmap
+  1.68    0.000008           8         1           getuid
+  1.68    0.000008           8         1           set_tid_address
+  1.26    0.000006           6         1           arch_prctl
+ 53.99    0.000257         257         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000476          19        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  3.04    0.000013           2         6           write
+ 10.75    0.000046          11         4           mmap
+ 12.38    0.000053          13         4           writev
+  4.44    0.000019           9         2           brk
+  6.07    0.000026          13         2           mprotect
+  3.50    0.000015           7         2           munmap
+  1.64    0.000007           7         1           getuid
+  1.87    0.000008           8         1           set_tid_address
+  1.87    0.000008           8         1           arch_prctl
+ 54.44    0.000233         233         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000428          17        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 60.98    0.000025           4         6           write
+  0.00    0.000000           0         4           mmap
+  0.00    0.000000           0         4           writev
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         2           mprotect
+ 39.02    0.000016           8         2           munmap
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000041           1        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  2.43    0.000009           1         6           write
+  9.97    0.000037           9         4           mmap
+  9.16    0.000034           8         4           writev
+  4.04    0.000015           7         2           brk
+  5.66    0.000021          10         2           mprotect
+  2.70    0.000010           5         2           munmap
+  1.62    0.000006           6         1           getuid
+  1.62    0.000006           6         1           set_tid_address
+  2.16    0.000008           8         1           arch_prctl
+ 60.65    0.000225         225         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000371          15        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+pwd: unrecognized option: z
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
 v3.19.1-476-g0fc5112363c [https://dl-cdn.alpinelinux.org/alpine/v3.19/main]
@@ -87,3 +230,148 @@ fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
 OK: 10 MiB in 22 packages
 /rel_path
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  2.36    0.000009           1         6           write
+  9.95    0.000038           9         4           mmap
+  9.16    0.000035           8         4           writev
+  3.93    0.000015           7         2           brk
+  5.24    0.000020          10         2           mprotect
+  2.62    0.000010           5         2           munmap
+  1.57    0.000006           6         1           getuid
+  1.57    0.000006           6         1           set_tid_address
+  1.83    0.000007           7         1           arch_prctl
+ 61.78    0.000236         236         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000382          15        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+ 45.71    0.000016          16         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+ 11.43    0.000004           4         1         1 ioctl
+ 42.86    0.000015          15         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000035           2        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  2.82    0.000011           1         6           write
+ 12.05    0.000047          11         4           mmap
+  9.23    0.000036           9         4           writev
+  2.82    0.000011           5         2           brk
+  5.38    0.000021          10         2           mprotect
+  2.31    0.000009           4         2           munmap
+  0.77    0.000003           3         1           getuid
+  1.03    0.000004           4         1           set_tid_address
+  1.03    0.000004           4         1           arch_prctl
+ 62.56    0.000244         244         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000390          16        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 22.33    0.000023          11         2           mprotect
+ 17.48    0.000018           9         2           brk
+ 10.68    0.000011          11         1           arch_prctl
+  6.80    0.000007           7         1           getcwd
+  5.83    0.000006           6         1           set_tid_address
+  5.83    0.000006           6         1           getuid
+  6.80    0.000007           7         1         1 ioctl
+ 11.65    0.000012          12         1           writev
+  0.00    0.000000           0         1           execve
+ 12.62    0.000013          13         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000103           8        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000049           8         6           write
+  0.00    0.000000           0         4           mmap
+  0.00    0.000000           0         4           writev
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           munmap
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000049           2        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  7.72    0.000019           9         2           mprotect
+  5.28    0.000013           6         2           brk
+  2.03    0.000005           5         1           arch_prctl
+  2.44    0.000006           6         1           getcwd
+  2.03    0.000005           5         1           set_tid_address
+  2.03    0.000005           5         1           getuid
+  2.03    0.000005           5         1         1 ioctl
+  4.47    0.000011          11         1           writev
+ 67.48    0.000166         166         1           execve
+  4.47    0.000011          11         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000246          20        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 58.33    0.000021           3         6           write
+  0.00    0.000000           0         4           mmap
+  0.00    0.000000           0         4           writev
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         2           mprotect
+ 41.67    0.000015           7         2           munmap
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000036           1        24           total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+pwd: unrecognized option: z
+BusyBox v1.36.1 (2023-11-07 18:53:09 UTC) multi-call binary.
+Usage: pwd
+Print the full filename of the current working directory
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  8.26    0.000038           6         6           write
+ 14.13    0.000065          16         4           mmap
+  8.91    0.000041          10         4           writev
+  4.13    0.000019           9         2           brk
+  5.43    0.000025          12         2           mprotect
+  9.13    0.000042          21         2           munmap
+  1.30    0.000006           6         1           getuid
+  1.96    0.000009           9         1           set_tid_address
+  1.52    0.000007           7         1           arch_prctl
+ 45.22    0.000208         208         1           execve
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000460          19        24           total

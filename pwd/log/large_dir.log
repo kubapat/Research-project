@@ -15,6 +15,75 @@ fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.
 Executing busybox-1.36.1-r15.trigger
 OK: 10 MiB in 22 packages
 /test_large_dir
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 28.12    0.000009           4         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+ 18.75    0.000006           6         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  9.38    0.000003           3         1           getuid
+  9.38    0.000003           3         1         1 ioctl
+ 34.38    0.000011          11         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000032           2        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  6.60    0.000020          10         2           mprotect
+  4.95    0.000015           7         2           brk
+  1.98    0.000006           6         1           arch_prctl
+  2.31    0.000007           7         1           getcwd
+  1.98    0.000006           6         1           set_tid_address
+  1.98    0.000006           6         1           getuid
+  2.31    0.000007           7         1         1 ioctl
+  4.29    0.000013          13         1           writev
+ 69.31    0.000210         210         1           execve
+  4.29    0.000013          13         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000303          25        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
 /test_large_dir
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
@@ -84,6 +153,185 @@ fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz
 OK: 10 MiB in 22 packages
 /test_large_dir
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  6.92    0.000027          13         2           mprotect
+  4.87    0.000019           9         2           brk
+  2.05    0.000008           8         1           arch_prctl
+  2.31    0.000009           9         1           getcwd
+  1.79    0.000007           7         1           set_tid_address
+  2.05    0.000008           8         1           getuid
+  1.79    0.000007           7         1         1 ioctl
+  3.59    0.000014          14         1           writev
+ 70.26    0.000274         274         1           execve
+  4.36    0.000017          17         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000390          32        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  7.27    0.000016           8         2           mprotect
+  4.09    0.000009           4         2           brk
+  1.36    0.000003           3         1           arch_prctl
+  1.36    0.000003           3         1           getcwd
+  1.36    0.000003           3         1           set_tid_address
+  1.36    0.000003           3         1           getuid
+  1.36    0.000003           3         1         1 ioctl
+  4.09    0.000009           9         1           writev
+ 73.64    0.000162         162         1           execve
+  4.09    0.000009           9         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000220          18        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+mkdir: can't create directory 'subdir1': File exists
+mkdir: can't create directory 'subdir2': File exists
+mkdir: can't create directory 'subdir3': File exists
+mkdir: can't create directory 'subdir4': File exists
+mkdir: can't create directory 'subdir5': File exists
+mkdir: can't create directory 'subdir6': File exists
+mkdir: can't create directory 'subdir7': File exists
+mkdir: can't create directory 'subdir8': File exists
+mkdir: can't create directory 'subdir9': File exists
+mkdir: can't create directory 'subdir10': File exists
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+ 22.69    0.000027          13         2           mprotect
+ 15.97    0.000019           9         2           brk
+  6.72    0.000008           8         1           arch_prctl
+  7.56    0.000009           9         1           getcwd
+  6.72    0.000008           8         1           set_tid_address
+  6.72    0.000008           8         1           getuid
+  6.72    0.000008           8         1         1 ioctl
+ 13.45    0.000016          16         1           writev
+  0.00    0.000000           0         1           execve
+ 13.45    0.000016          16         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000119           9        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
+% time     seconds  usecs/call     calls    errors syscall
+------ ----------- ----------- --------- --------- ----------------
+  0.00    0.000000           0         2           mprotect
+  0.00    0.000000           0         2           brk
+  0.00    0.000000           0         1           arch_prctl
+  0.00    0.000000           0         1           getcwd
+  0.00    0.000000           0         1           set_tid_address
+  0.00    0.000000           0         1           getuid
+  0.00    0.000000           0         1         1 ioctl
+  0.00    0.000000           0         1           writev
+  0.00    0.000000           0         1           execve
+  0.00    0.000000           0         1           mmap
+------ ----------- ----------- --------- --------- ----------------
+100.00    0.000000           0        12         1 total
 /test_large_dir
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/main/x86_64/APKINDEX.tar.gz
 fetch https://dl-cdn.alpinelinux.org/alpine/v3.19/community/x86_64/APKINDEX.tar.gz

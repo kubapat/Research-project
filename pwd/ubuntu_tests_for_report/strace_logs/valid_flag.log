@@ -1,0 +1,35 @@
+root@d0fb87668091:/tool/sysfilter/extraction/app# strace /bin/pwd -L
+execve("/bin/pwd", ["/bin/pwd", "-L"], 0x7ffc23b3a998 /* 11 vars */) = 0
+brk(NULL)                               = 0x55b4fcf9f000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=18988, ...}) = 0
+mmap(NULL, 18988, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f476cca6000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\240\35\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=2030928, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f476cca4000
+mmap(NULL, 4131552, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f476c691000
+mprotect(0x7f476c878000, 2097152, PROT_NONE) = 0
+mmap(0x7f476ca78000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f476ca78000
+mmap(0x7f476ca7e000, 15072, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f476ca7e000
+close(3)                                = 0
+arch_prctl(ARCH_SET_FS, 0x7f476cca5540) = 0
+mprotect(0x7f476ca78000, 16384, PROT_READ) = 0
+mprotect(0x55b4fb407000, 4096, PROT_READ) = 0
+mprotect(0x7f476ccab000, 4096, PROT_READ) = 0
+munmap(0x7f476cca6000, 18988)           = 0
+brk(NULL)                               = 0x55b4fcf9f000
+brk(0x55b4fcfc0000)                     = 0x55b4fcfc0000
+stat("/tool/sysfilter/extraction/app", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat(".", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+fstat(1, {st_mode=S_IFCHR|0620, st_rdev=makedev(136, 1), ...}) = 0
+write(1, "/tool/sysfilter/extraction/app\n", 31/tool/sysfilter/extraction/app
+) = 31
+close(1)                                = 0
+close(2)                                = 0
+exit_group(0)                           = ?
++++ exited with 0 +++
